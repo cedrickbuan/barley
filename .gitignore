@@ -44,5 +44,7 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 
-# machine-local Claude Code settings
+# machine-local Claude Code settings and personally installed skills/agents
 /.claude/settings.local.json
+/.claude/skills/
+/.claude/agents/

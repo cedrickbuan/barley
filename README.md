@@ -1,6 +1,6 @@
-# Arley Bakery website
+# barley
 
-Single-page site for Arley Bakery (Pilsen, Chicago), built with Next.js, Tailwind CSS, GSAP (ScrollTrigger) and Lenis smooth scrolling.
+Website for Arley Bakery (Pilsen, Chicago): a single-page site built with Next.js, Tailwind CSS, GSAP (ScrollTrigger) and Lenis smooth scrolling.
 
 ## Run locally
 
