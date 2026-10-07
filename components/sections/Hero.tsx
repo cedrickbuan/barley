@@ -35,7 +35,7 @@ export function Hero() {
           fill
           preload
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[70%_50%] md:object-center"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/20" aria-hidden />

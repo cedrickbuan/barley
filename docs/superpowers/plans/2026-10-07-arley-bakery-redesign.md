@@ -21,7 +21,7 @@
 - Every image goes through `next/image` with explicit `width`/`height` (or `fill` with a sized parent) and an `alt`.
 - Content must never depend on JS to become visible: no CSS that starts elements at `opacity: 0`. Start states come from `gsap.from()` / `gsap.set()` inside `useGSAP`.
 - All motion is inside `gsap.matchMedia()` under `(prefers-reduced-motion: no-preference)`; Lenis is not started when reduced motion is set.
-- Design tokens (Tailwind theme): `cream #FBF6EE`, `crust #E9D8BE`, `cocoa #3B2416`, `caramel #B5733A`, `ink #1F1712`. Text on cream uses `cocoa` or `ink` (WCAG AA).
+- Design tokens (Tailwind theme): `cream #FBF6EE`, `crust #E9D8BE`, `cocoa #3B2416`, `caramel #935A28` (darkened from #B5733A in Task 11 for WCAG AA), `ink #1F1712`. Text on cream uses `cocoa` or `ink` (WCAG AA).
 - Downloading files requires the user's explicit OK in chat (list file names, source, approximate size) before running the download.
 - Lighthouse on the production build: Performance ≥ 90, Accessibility ≥ 90.
 
