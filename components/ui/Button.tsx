@@ -1,16 +1,19 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
+// Colours live only here: Tailwind classes can't reliably override each other via `className`.
+const VARIANTS = {
+  primary: "bg-cocoa text-cream hover:bg-ink",
+  secondary: "border border-current text-cocoa hover:bg-cocoa/10",
+  primaryOnDark: "bg-cream text-cocoa hover:bg-crust",
+  secondaryOnDark: "border border-current text-cream hover:bg-cream/15",
+} as const;
+
 type ButtonProps = {
   href: string;
-  variant?: "primary" | "secondary";
+  variant?: keyof typeof VARIANTS;
   external?: boolean;
   children: ReactNode;
 } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "children">;
-
-const VARIANTS = {
-  primary: "bg-cocoa text-cream hover:bg-ink",
-  secondary: "border border-current bg-transparent hover:bg-cocoa/10",
-} as const;
 
 export function Button({ href, variant = "primary", external, children, className = "", ...rest }: ButtonProps) {
   return (

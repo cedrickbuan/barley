@@ -1,15 +1,14 @@
+import { Hero } from "@/components/sections/Hero";
 import { Header } from "@/components/sections/Header";
 import { MobileActionBar } from "@/components/ui/MobileActionBar";
-import { galleryHeading, hero, menuHeading, showcaseHeading, story, visitHeading } from "@/content/site";
+import { galleryHeading, menuHeading, showcaseHeading, story, visitHeading } from "@/content/site";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <section id="hero" data-section>
-          <h1>{hero.headline}</h1>
-        </section>
+        <Hero />
         <section id="story" data-section>
           <h2>{story.heading}</h2>
         </section>
