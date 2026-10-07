@@ -1,9 +1,11 @@
+import { Header } from "@/components/sections/Header";
+import { MobileActionBar } from "@/components/ui/MobileActionBar";
 import { galleryHeading, hero, menuHeading, showcaseHeading, story, visitHeading } from "@/content/site";
 
 export default function Home() {
   return (
     <>
-      <header id="header" data-section />
+      <Header />
       <main>
         <section id="hero" data-section>
           <h1>{hero.headline}</h1>
@@ -25,6 +27,7 @@ export default function Home() {
         </section>
       </main>
       <footer id="footer" data-section />
+      <MobileActionBar />
     </>
   );
 }

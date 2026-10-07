@@ -29,6 +29,13 @@ body {
   @apply bg-cream text-ink font-sans antialiased;
 }
 
+/* Room for the fixed mobile action bar so it never covers the footer. */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(3.25rem + env(safe-area-inset-bottom));
+  }
+}
+
 :focus-visible {
   outline: 3px solid var(--color-caramel);
   outline-offset: 3px;
