@@ -63,3 +63,22 @@ test("footer shows phone and current year", async ({ page }) => {
   await expect(footer).toContainText(business.phoneDisplay);
   await expect(footer).toContainText(String(new Date().getFullYear()));
 });
+
+test("desktop: story heading and image are visible while the section scrolls into view", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop only");
+  await page.goto("/");
+  await page.waitForLoadState("load");
+  // Bring the Story's top edge to the middle of the screen, before it pins.
+  await page.evaluate(() => {
+    const top = document.querySelector("#story")!.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo(0, top - window.innerHeight / 2);
+  });
+  await page.waitForTimeout(1500);
+  for (const sel of ["#story h2", "#story img"]) {
+    expect(await page.locator(sel).evaluate((e) => {
+      let o = 1;
+      for (let n: Element | null = e; n; n = n.parentElement) o *= Number(getComputedStyle(n).opacity);
+      return o;
+    })).toBeGreaterThan(0.9);
+  }
+});

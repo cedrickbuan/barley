@@ -45,3 +45,8 @@ body {
   outline: 3px solid var(--color-caramel);
   outline-offset: 3px;
 }
+
+/* Sections focused after in-page navigation (so Tab continues from there) need no ring. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
