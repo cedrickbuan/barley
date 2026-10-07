@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { hero, showcase, story } from "../../content/site";
+import { gallery, hero, showcase, story } from "../../content/site";
 
 test("hero shows headline, image and CTAs", async ({ page }) => {
   await page.goto("/");
@@ -36,4 +36,11 @@ test("menu lists the four items with prices", async ({ page }) => {
   expect(names).toEqual(["Flan", "Chocolate Cookies", "Chocolate Cupcakes", "Gummies"]);
   await expect(page.locator("#menu [data-menu-item]").first()).toContainText("$10.99");
   await expect(page.locator("#menu")).not.toContainText("chololate");
+});
+
+test("gallery shows every photo", async ({ page }) => {
+  await page.goto("/");
+  const imgs = page.locator("#gallery img");
+  await expect(imgs).toHaveCount(gallery.length);
+  for (const [i, photo] of gallery.entries()) await expect(imgs.nth(i)).toHaveAttribute("alt", photo.alt);
 });
