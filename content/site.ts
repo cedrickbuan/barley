@@ -50,7 +50,7 @@ export const hero = {
   subhead: "Cookies, cupcakes, flan and more — made by hand, in small batches, with ingredients you can name.",
   image: {
     src: "/images/store.jpg",
-    alt: "The Arley Bakery shop counter filled with fresh pastries",
+    alt: "Croissants, sugar-dusted rolls and buns on a marble counter behind the bakery glass",
     width: 2400,
     height: 1600,
   },
@@ -65,7 +65,7 @@ export const story = {
   ],
   image: {
     src: "/images/hands.jpg",
-    alt: "A baker's hands shaping fresh dough on a floured table",
+    alt: "A baker holding a freshly baked round sourdough loaf",
     width: 2400,
     height: 1600,
   },
@@ -76,15 +76,15 @@ export const showcaseHeading = "Made by hand, every morning";
 export const showcase: ShowcaseSlide[] = [
   {
     caption: "Flaky. Golden. Out of the oven at dawn.",
-    image: { src: "/images/showcase-pastry.jpg", alt: "Close-up of golden, flaky pastries", width: 2400, height: 1600 },
+    image: { src: "/images/showcase-pastry.jpg", alt: "Close-up of a pile of golden, flaky croissants", width: 2000, height: 2000 },
   },
   {
     caption: "Real chocolate, melted the slow way.",
-    image: { src: "/images/showcase-chocolate.jpg", alt: "Close-up of chocolate cookies with melted chocolate chunks", width: 2400, height: 1600 },
+    image: { src: "/images/showcase-chocolate.jpg", alt: "A tall stack of chocolate chip cookies", width: 1920, height: 2400 },
   },
   {
     caption: "Frosted by hand, one at a time.",
-    image: { src: "/images/showcase-cupcakes.jpg", alt: "Close-up of freshly frosted cupcakes", width: 2400, height: 1600 },
+    image: { src: "/images/showcase-cupcakes.jpg", alt: "A chocolate cupcake with swirled chocolate frosting", width: 1600, height: 2400 },
   },
 ];
 
@@ -97,40 +97,40 @@ export const menu: MenuItem[] = [
     name: "Flan",
     description: "A 22\" Mexican-style flan with silky caramel. Our customers' favourite.",
     price: 10.99,
-    image: { src: "/images/menu-flan.jpg", alt: "A slice of caramel flan on a plate", width: 1200, height: 1200 },
+    image: { src: "/images/menu-flan.jpg", alt: "A caramel flan on a white plate", width: 857, height: 1200 },
   },
   {
     id: "chocolate-cookies",
     name: "Chocolate Cookies",
     description: "A pack of 12 soft cookies loaded with milk chocolate.",
     price: 10.99,
-    image: { src: "/images/menu-cookies.jpg", alt: "A stack of chocolate chip cookies", width: 1200, height: 1200 },
+    image: { src: "/images/menu-cookies.jpg", alt: "Four chocolate chip cookies", width: 798, height: 1200 },
   },
   {
     id: "chocolate-cupcakes",
     name: "Chocolate Cupcakes",
     description: "A pack of 4 soft, rich cupcakes with chocolate frosting.",
     price: 10.99,
-    image: { src: "/images/menu-cupcakes.jpg", alt: "Chocolate cupcakes with swirled frosting", width: 1200, height: 1200 },
+    image: { src: "/images/menu-cupcakes.jpg", alt: "A chocolate cupcake topped with hazelnut cream and a chocolate drizzle", width: 800, height: 1200 },
   },
   {
     id: "gummies",
     name: "Gummies",
     description: "Chewy, fruity gummies made with real fruit juice.",
     price: 10.99,
-    image: { src: "/images/menu-gummies.jpg", alt: "A bowl of colourful fruit gummies", width: 1200, height: 1200 },
+    image: { src: "/images/menu-gummies.jpg", alt: "A pile of colourful gummy bears", width: 960, height: 1200 },
   },
 ];
 
 export const galleryHeading = "Inside the bakery";
 
 export const gallery: ImageAsset[] = [
-  { src: "/images/girl.jpg", alt: "A customer enjoying a pastry at the bakery", width: 2400, height: 1600 },
-  { src: "/images/cupcakes.jpg", alt: "Rows of decorated cupcakes on the counter", width: 2400, height: 1600 },
-  { src: "/images/gallery-bread.jpg", alt: "Fresh loaves of bread cooling on a rack", width: 2400, height: 1600 },
-  { src: "/images/gallery-croissants.jpg", alt: "A tray of croissants fresh from the oven", width: 2400, height: 1600 },
-  { src: "/images/gallery-coffee.jpg", alt: "A coffee and a pastry on a café table", width: 2400, height: 1600 },
-  { src: "/images/gallery-cookies.jpg", alt: "Cookies cooling on a baking sheet", width: 2400, height: 1600 },
+  { src: "/images/girl.jpg", alt: "A smiling baker behind a stand of frosted cakes in the shop window", width: 2400, height: 1600 },
+  { src: "/images/cupcakes.jpg", alt: "Tiers of cupcakes with swirled cream frosting", width: 2400, height: 1600 },
+  { src: "/images/gallery-bread.jpg", alt: "Two crusty artisan loaves on a cooling rack", width: 1800, height: 2400 },
+  { src: "/images/gallery-croissants.jpg", alt: "A tray of freshly baked croissants", width: 1351, height: 2400 },
+  { src: "/images/gallery-coffee.jpg", alt: "A cappuccino and a croissant on a café table", width: 1600, height: 2400 },
+  { src: "/images/gallery-cookies.jpg", alt: "A batch of freshly baked cookies on a baking sheet", width: 2400, height: 1600 },
 ];
 
 export const visitHeading = "Come and visit";
