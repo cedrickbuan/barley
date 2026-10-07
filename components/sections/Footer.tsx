@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CurrentYear } from "@/components/ui/CurrentYear";
 import { business } from "@/content/site";
 import { formatAddress } from "@/lib/links";
@@ -27,7 +28,11 @@ export function Footer() {
             </p>
           )}
           <p className="pt-3 text-sm text-cream/60">
-            © <CurrentYear /> {business.name}. All rights reserved.
+            ©{" "}
+            <Suspense fallback={null}>
+              <CurrentYear />
+            </Suspense>{" "}
+            {business.name}. All rights reserved.
           </p>
         </div>
       </div>
