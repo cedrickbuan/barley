@@ -1,7 +1,8 @@
 import { Hero } from "@/components/sections/Hero";
+import { Story } from "@/components/sections/Story";
 import { Header } from "@/components/sections/Header";
 import { MobileActionBar } from "@/components/ui/MobileActionBar";
-import { galleryHeading, menuHeading, showcaseHeading, story, visitHeading } from "@/content/site";
+import { galleryHeading, menuHeading, showcaseHeading, visitHeading } from "@/content/site";
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <section id="story" data-section>
-          <h2>{story.heading}</h2>
-        </section>
+        <Story />
         <section id="showcase" data-section>
           <h2>{showcaseHeading}</h2>
         </section>
