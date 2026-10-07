@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf6ee;
+  --color-crust: #e9d8be;
+  --color-cocoa: #3b2416;
+  --color-caramel: #b5733a;
+  --color-ink: #1f1712;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-caramel);
+  outline-offset: 3px;
+}
