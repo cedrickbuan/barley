@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { hero, story } from "../../content/site";
+import { hero, showcase, story } from "../../content/site";
 
 test("hero shows headline, image and CTAs", async ({ page }) => {
   await page.goto("/");
@@ -18,4 +18,14 @@ test("story shows heading, all paragraphs and image", async ({ page }) => {
   await img.scrollIntoViewIfNeeded();
   await expect(img).toBeVisible();
   await expect(img).toHaveAttribute("alt", story.image.alt);
+});
+
+test("showcase renders one figure per slide with caption", async ({ page }) => {
+  await page.goto("/");
+  const figures = page.locator("#showcase figure");
+  await expect(figures).toHaveCount(showcase.length);
+  for (const [i, slide] of showcase.entries()) {
+    await expect(figures.nth(i).locator("figcaption")).toHaveText(slide.caption);
+    await expect(figures.nth(i).locator("img")).toHaveAttribute("alt", slide.image.alt);
+  }
 });
