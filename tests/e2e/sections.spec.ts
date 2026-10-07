@@ -29,3 +29,11 @@ test("showcase renders one figure per slide with caption", async ({ page }) => {
     await expect(figures.nth(i).locator("img")).toHaveAttribute("alt", slide.image.alt);
   }
 });
+
+test("menu lists the four items with prices", async ({ page }) => {
+  await page.goto("/");
+  const names = await page.locator("#menu [data-menu-item] h3").allTextContents();
+  expect(names).toEqual(["Flan", "Chocolate Cookies", "Chocolate Cupcakes", "Gummies"]);
+  await expect(page.locator("#menu [data-menu-item]").first()).toContainText("$10.99");
+  await expect(page.locator("#menu")).not.toContainText("chololate");
+});

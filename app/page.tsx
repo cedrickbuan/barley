@@ -1,9 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
 import { Story } from "@/components/sections/Story";
 import { Showcase } from "@/components/sections/Showcase";
+import { Menu } from "@/components/sections/Menu";
 import { Header } from "@/components/sections/Header";
 import { MobileActionBar } from "@/components/ui/MobileActionBar";
-import { galleryHeading, menuHeading, visitHeading } from "@/content/site";
+import { galleryHeading, visitHeading } from "@/content/site";
 
 export default function Home() {
   return (
@@ -13,9 +14,7 @@ export default function Home() {
         <Hero />
         <Story />
         <Showcase />
-        <section id="menu" data-section>
-          <h2>{menuHeading}</h2>
-        </section>
+        <Menu />
         <section id="gallery" data-section>
           <h2>{galleryHeading}</h2>
         </section>
