@@ -11,8 +11,8 @@ export type Address = {
   postalCode: string;
 };
 
-/** `opens` / `closes` are 24h "HH:MM". */
-export type OpeningHours = { days: string; opens: string; closes: string }[];
+/** `days` is shown to visitors; `dayOfWeek` is for search engines. `opens` / `closes` are 24h "HH:MM". */
+export type OpeningHours = { days: string; dayOfWeek: string[]; opens: string; closes: string }[];
 
 export type MenuItem = {
   id: string;
@@ -29,6 +29,7 @@ export const business = {
   tagline: "Fresh bakes from the heart of Pilsen",
   phoneDisplay: "(773) 222-3333",
   phoneHref: "tel:+17732223333",
+  phoneIntl: "+1-773-222-3333",
   address: {
     street: "", // PLACEHOLDER: street address still to be confirmed by the bakery
     neighborhood: "Pilsen",
@@ -38,9 +39,14 @@ export const business = {
   } satisfies Address,
   // PLACEHOLDER: opening hours still to be confirmed by the bakery
   hours: [
-    { days: "Monday – Friday", opens: "07:00", closes: "18:00" },
-    { days: "Saturday", opens: "08:00", closes: "18:00" },
-    { days: "Sunday", opens: "08:00", closes: "14:00" },
+    {
+      days: "Monday – Friday",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "18:00",
+    },
+    { days: "Saturday", dayOfWeek: ["Saturday"], opens: "08:00", closes: "18:00" },
+    { days: "Sunday", dayOfWeek: ["Sunday"], opens: "08:00", closes: "14:00" },
   ] satisfies OpeningHours,
   social: [] as { label: string; href: string }[],
 };

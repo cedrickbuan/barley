@@ -25,6 +25,11 @@ html.lenis {
   }
 }
 
+/* Keep anchored sections clear of the fixed header. */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 body {
   @apply bg-cream text-ink font-sans antialiased;
 }
